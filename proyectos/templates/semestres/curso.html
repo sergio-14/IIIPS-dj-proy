@@ -1,0 +1,56 @@
+{% extends 'p_principal.html' %}
+
+{% block content %}
+{% load static %}
+<br>
+<br>
+<div class="container">
+  <div class="card-body">
+    <h4 class="card-title">LISTA DE MATERIAS</h4> 
+    <br>
+    <div class="card-header">
+        <a name=""  class="btn btn-success" id="boton1" href="{% url 'crearc' %}" role="button">Registrar</a>
+    </div>
+    <br>
+    <div class="table-responsive">
+        <table class="table">
+            <thead >
+                <tr id="yuu">
+                    <th scope="col">MATERIA</th>
+                    <th scope="col">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mattt in mform %}
+                <tr id="tbl">
+                    <td data-label="Materia">{{ mattt.Materia }}
+
+                    </td>
+                    <td data-label="Acciones">
+                        <a name="" id="" class="btn btn-info" href="{% url 'editarc' mattt.Id_Materia %}" role="button">Editar</a>
+                        |
+                        <a name="" id="" class="btn btn-danger" href="{% url 'eliminarm' mattt.Id_Materia %}"
+                         role="button" onclick="return ConfirmDelete()">Eliminar</a>
+                    </td>
+                   
+                <tr>
+                    {% endfor %}
+                   
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

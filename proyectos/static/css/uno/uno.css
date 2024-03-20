@@ -1,0 +1,179 @@
+/* Fixed sidenav, full height */
+.sidenavv {
+    height: 100%;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 38px;
+    left: 0;
+    background: linear-gradient(#0a2879,
+    rgb(6, 2, 26));
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  #letr{
+    font-size: 20px;
+    color: rgb(161, 159, 212);
+    text-align:center;
+    background: #0e064991;
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenavv a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fffaca;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .sidenavv a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Main content */
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: rgb(19, 69, 71);
+    color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #f9fd161c;
+    padding-left: 8px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+
+  #imgr{
+    height: 618px;
+    width: 100%;
+  }
+
+/* SECCION T R A B A J O S */
+.trabajos{
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+.trabajos h2{
+  text-align: center;
+}
+.trabajos nav{
+  text-align: center;
+  margin: 30px 0;
+}
+.trabajos nav a{
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 20px;
+  color: #020c16;
+  font-weight: bold;
+  padding: 3px 10px;
+  border: 3px solid transparent;
+  font-size: 20px;
+}
+.trabajos nav a:hover{
+  border: 1px solid #011113;
+  background-color: #062336;
+  border-radius: 10px;  
+
+}
+/* Esta clase se agregrá dinámicamente cuando haya seleccionada una opción */
+.borde{
+  border: 1px solid #02151a !important;
+  background-color: #07293f;
+  border-radius: 10px;  
+}
+.trabajos .galeria .item img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  
+}
+.trabajos .galeria{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-gap:30px;
+  
+}
+.trabajos .galeria .item{
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgb(6, 28, 61);
+  border-radius: 10px;
+  box-shadow: 12px 15px 1px  rgba(67, 102, 119, 0.747);
+  background-image: linear-gradient(rgb(231, 238, 243) ,rgb(4, 25, 31));
+}
+  
+.trabajos .galeria .item .info{
+  position: absolute;
+  top: -100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background-color:#03191ba8 ;
+  width: 100%;
+  padding: 20px;
+  opacity: 0;
+  transition: .3s;
+}
+.trabajos .galeria .item .info h3{
+  color: #dcf4ff;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border: 2px solid rgb(117, 143, 182);
+  border-radius: 10px;
+  
+}
+.trabajos .galeria .item .info span{
+  color: #dbf4fd;
+  display: inline-block;
+  margin: 0 3px;
+  padding:  0 5px;
+  font-size: 20px;
+}
+.trabajos .galeria .item .info a{
+  display: block;
+  margin: 10px;
+  text-decoration: none;
+  color: #c4edfa;
+  background-image: linear-gradient(rgb(18, 81, 216),rgb(3, 20, 27));
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 13px;
+}
+.trabajos .galeria .item:hover .info{
+  opacity: 1;
+  top: 0;
+}
+
+@media screen and (max-width:800px){
+  .trabajos nav a{
+      margin: 0 5px;
+  }
+}
+#titsemestre{
+  color: #02111b;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+}

@@ -1,0 +1,99 @@
+#pieportada{
+    width: 90px;
+    height: 90px;
+    padding: 18px;
+    
+}
+#tform{
+  height: 40%;
+  background: linear-gradient(#02111b,
+  rgb(4, 34, 54));
+    
+}
+#af{
+    color: rgb(241, 184, 24);
+    font-size: 25px;
+    font-weight: bold;
+}
+#formB{
+    top: 465px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1vh;
+    width: 100%;
+    /*background: linear-gradient(#1f043800,
+    rgba(21, 0, 138, 0));*/
+    background-position: center;
+    background-size: cover;
+    
+}
+
+
+
+/*prueba prueba prueba*/
+/* The Modal (background) */
+
+/* Bordered form */
+
+  #kont{
+    width: 50%;
+    height: 70%;
+    background-color: rgb(15, 5, 44);
+    border-radius: 10px;
+
+  }
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    color: aliceblue;
+  }
+  
+  /* Avatar image */
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+    
+    
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }

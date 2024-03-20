@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if user.is_superuser or user.is_staff %}
+
+{% else %}
+<main class="container justify-content-center align-items-center ">
+    <div class="row d-flex justify-content-center ">
+        <div class="col-12 col-md-8 col-lg-6 ">
+            <div class="card bg-white mt-5">
+                <div class="card-body p-5  mt-5">
+                    <h1>No tienes permisos para acceder a esta página.</h1>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-danger" onclick="window.location.href='{% url 'home' %}'">Volver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endif %}
+
+{% endblock %}

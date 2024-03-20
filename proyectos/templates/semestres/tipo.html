@@ -1,0 +1,58 @@
+{% extends 'p_principal.html' %}
+
+{% block content %}
+{% load static %}
+<br>
+<br>
+<div class="container">
+  <div class="card-body">
+    <h4 class="card-title">LISTA DE SEMESTRES</h4> 
+    <br>
+    <div class="card-header">
+        <a name=""  class="btn btn-success" id="boton1" href="{% url 'creart' %}" role="button">Registrar</a>
+    </div>
+    <br>
+    <div class="table-responsive">
+        <table class="table">
+            <thead >
+                <tr id="yuu">
+                    <th scope="col">SEMESTRES</th>
+                    <th scope="col">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tipp in tform %}
+                <tr id="tbl">
+                    <td data-label="Tipo Proyecto">{{ tipp.Tipo }}
+
+                    </td>
+                    <td data-label="Acciones">
+                        <a name="" id="" class="btn btn-info" href="{% url 'editart' tipp.Id_tipo %}" role="button">EDITAR</a>
+                        |
+                        <a name="" id="" class="btn btn-danger" href="{% url 'eliminart' tipp.Id_tipo %}" role="button">BORRAR</a>
+                    </td>
+                   
+                <tr>
+                    {% endfor %}
+                   
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

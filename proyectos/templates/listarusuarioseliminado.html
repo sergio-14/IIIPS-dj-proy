@@ -1,0 +1,39 @@
+{% extends 'p_principal.html' %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<h2>Usuarios Dados de Baja</h2>
+<div class= "container">
+ <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre del Usuario</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+       
+        {% for user in deleted_users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>
+                <!-- Asume que tienes una vista para reactivar usuarios y una URL nombrada 'reactivar_usuario' -->
+                <a class="btn btn-success" href="{% url 'reactivar_usuario' user.id %}">Reactivar</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="2">No hay usuarios desactivados.</td>
+        </tr>
+        {% endfor %}
+      </tr>
+    </tbody>
+  </table>   
+</div>
+<br><br><br><br><br><br><br><br>
+
+{% endblock %}

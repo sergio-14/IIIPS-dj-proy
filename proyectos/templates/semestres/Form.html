@@ -1,0 +1,11 @@
+<form enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    {{formulario.as_p}}
+    <a id="boton2">
+        <input name="" id="boton1" class="btn btn-primary " type="submit" value="Enviar Informacion">
+    </a>
+    <a name="" id="boton1" class="btn btn-danger " href="{% url 'proye' %}" role="button">Cancelar</a>
+    <br>
+    <br>
+    <br>
+</form>

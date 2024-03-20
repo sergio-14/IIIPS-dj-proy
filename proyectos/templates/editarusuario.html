@@ -1,0 +1,62 @@
+{% extends "p_principal.html" %}
+
+{% load static %}
+
+{%block content%}
+<br><br><br><br>
+<div class="container">
+    <h1 class="text-center">Editar Usuario</h1>
+    <form method="post" action="{% url 'editarusuario' user.id %}">
+        {% csrf_token %}
+        {{error}}
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" name="username" class="form-control" id="username" value="{{ user.username }}" required>
+        </div>
+        <div class="form-group">
+            <label for="first_name">First name:</label>
+            <input type="text" name="first_name" class="form-control" id="first_name" value="{{ user.first_name }}">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last name:</label>
+            <input type="text" name="last_name" class="form-control" id="last_name" value="{{ user.last_name }}">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" name="email" class="form-control" id="email" value="{{ user.email }}">
+        </div>
+        <br><br>
+        <h1 class="text-center">Asignacion de Roles para Usuarios</h1>
+        <br>
+        <div class="form-check">
+            <input type="checkbox" name="is_superuser" class="form-check-input" id="is_superuser"{% if user.is_superuser %}checked{% endif %}>
+            <label class="form-check-label" for="is_superuser">Superuser status</label>
+        </div>                
+        <div class="form-check">
+            <input type="checkbox" name="is_staff" class="form-check-input" id="is_staff" {% if user.is_staff %}checked{% endif %}>
+            <label class="form-check-label" for="is_staff">Staff status</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" name="is_active" class="form-check-input" id="is_active" {% if user.is_active %}checked{% endif %}>
+            <label class="form-check-label" for="is_active">Active</label>
+        </div>
+        <br><br>
+        <h1 class="text-center">Permisos para el Usuario Sobre el Sistema</h1>
+        <br>
+        {% for perm in all_perms %}
+        <div class="form-check">
+            <input type="checkbox" name="permissions" value="{{ perm.id }}"
+            class="form-check-input" id="perm_{{ perm.id }}"
+            {% if perm in user_perms %} checked {% endif %}>
+            <label class="form-check-label" for="perm_{{ perm.id }}">{{ perm.name }}</label>
+        </div>
+        {% endfor %}
+        <br>
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        <button type="submit" href="{% url 'listarusuarios' %}" class="btn btn-danger">Cancelar</button>
+    </form>
+</div>
+<br><br><br>
+{% endblock %}
+
+

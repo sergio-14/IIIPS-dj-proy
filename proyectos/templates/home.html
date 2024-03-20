@@ -1,0 +1,20 @@
+{% extends 'p_principal.html'%}
+{% load static %}
+
+{% block content %}
+<br>
+<div id="principal">
+    <br>
+    <br>
+    <br><br><br><br><br>
+    
+    <img src="{% static 'img\imagenfond.png' %}" alt="" id="imgf" class="desktop-only"> 
+    <img src="{% static 'img\logo.png' %}" alt="" id="img1" class="desktop-only"> 
+    <img src="{% static 'img\uab1.png' %}" alt="" id="img2" class="desktop-only">
+    <img src="{% static 'img\car.png' %}"alt="" id="img3" class="desktop-only"> 
+    <img src="{% static 'img\cis.png' %}" alt="" id="img4" class="desktop-only"> 
+    <img id="logoResponsive" src="{% static 'img\logo.png' %}" alt="" class="mobile-only">
+    <h1 id="textResponsive" class="mobile-only">UNIVERSIDAD AUTONOMA DEL BENI <br>"JOSE BALLIVIAN"</h1>
+</div>
+<div id="particles-js"></div>
+{% endblock  %}

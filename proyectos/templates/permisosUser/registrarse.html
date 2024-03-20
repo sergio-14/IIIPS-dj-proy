@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <main class="container justify-content-center align-items-center ">
+          <div class="row d-flex justify-content-center ">
+            <div class="col-12 col-md-8 col-lg-6 ">
+              <div class="card bg-white mt-5">
+                <div class="card-body p-5 mt-5">
+                  <form action="/registrarse/" method="POST" class=" mb-3 mt-md-4">
+                    {% csrf_token %}
+                    {{error}}
+                    <h2 class=" fw-bold mb-2 text-uppercase ">Registrarse</h2>
+                    <p class=" mb-4">Ingrese su cuenta!</p>
+                    
+                    <div class=" row mb-3">
+                      <label for="email" class="form-label ">Correo Electronico</label>
+                      <input type="email" class="form-control" name="username" id="username" placeholder="name@example.com">
+                    </div>
+                    <div class=" row mb-3">
+                      <label for="password" class="form-label ">Contraseña</label>
+                      <input type="password" class="form-control" name="password1" id="password1" placeholder="*******">
+                    </div>
+                    <div class=" row mb-3">
+                      <label for="password" class="form-label ">confirmar Contraseña</label>
+                      <input type="password" class= "form-control" name= "password2" id= "password2" placeholder = "*******">
+                    </div>
+                    
+                    <div class="d-grid">
+                      <button class="btn btn-outline-dark" type="submit">Registrar</button>
+                    </div>
+                  </form>
+                  <div>
+                    <p class="mb-0 text-center">¿Ya estás registrado? <a href="{% url 'ingresar' %}" class="text-primary fw-bold">Ingresar.!</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+{% endblock %}

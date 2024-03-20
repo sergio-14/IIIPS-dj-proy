@@ -1,0 +1,57 @@
+{% extends 'p_principal.html' %}
+
+{% block content %}
+{% load static %}
+<br>
+<br>
+<div class="container">
+  <div class="card-body">
+    <h4 class="card-title">LISTA FASE O ETAPA DEL PROYECTO</h4>
+    <br>
+    <div class="card-header">
+        <a name=""  class="btn btn-success" id="boton1" href="{% url 'crearf' %}" role="button">Registrar</a>
+    </div>
+    <br>
+    <div class="table-responsive">
+        <table class="table">
+            <thead >
+                <tr id="yuu">
+                    <th scope="col">FASE O ETAPA</th>
+                    <th scope="col">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for etap in fform %}
+                <tr id="tbl">
+                    <td data-label="Fase o Etapa del Proyecto">{{ etap.Fase }}
+
+                    </td>
+                    <td data-label="Acciones">
+                        <a name="" id="" class="btn btn-info" href="{% url 'editarf' etap.Id_fase %}" role="button">EDITAR</a> 
+                        |
+                        <a name="" id="" class="btn btn-danger" href="{% url 'eliminarf' etap.Id_fase %}" role="button">BORRAR</a>
+                    </td>
+                   
+                <tr>
+                    {% endfor %}
+                   
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

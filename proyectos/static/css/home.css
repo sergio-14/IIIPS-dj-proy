@@ -1,0 +1,112 @@
+/* Style the links inside the sidenav */
+#menunav{
+  background: linear-gradient(#031929,
+    rgb(1, 6, 22));
+}
+#menuoff{
+  background: linear-gradient(#04243bc0,
+    rgba(1, 6, 22, 0.712));
+}
+#offcanvasDarkNavbar{
+  background: linear-gradient(#031a2b,rgb(1, 4, 14));
+  border-left: 1px solid rgb(204, 130, 45);
+  border-bottom-left-radius: 64px;
+  width: 300px;
+}
+#offcanvasDarkNavbarLabel{
+  color: #775118;
+}
+
+.slide img {
+  height: 96vh;
+}
+#letraport{
+  color: #f8b21a;
+  font-size: 20px;
+}
+#icon{
+  color: rgb(204, 117, 18);
+  padding: 5px;
+}
+
+/* estacio para el grid*/
+/*# sourceMappingURL=estilos.css.map */
+
+
+
+ .container .fila {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+
+.container .fila .proyecto {
+  max-width: 600px;
+  border: 4px solid #08385f;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15PX;
+  box-shadow: 15px 39px 1px rgba(193, 198, 202, 0.918);
+}
+
+.container .fila .proyecto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s;
+  
+}
+
+
+.container .fila .proyecto .info {
+  position: absolute;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #d48a1b;
+  width: 100%;
+  padding: 10px;
+  opacity: 0;
+  bottom: -40px;
+  transition: .5s;
+  font-size: 25px;
+}
+
+.container .fila .proyecto:hover .info {
+  opacity: 1;
+  bottom: 0;
+}
+
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 50px 0;
+  }
+  .container .fila {
+    display: block;
+  }
+  .container .fila .proyecto {
+    margin: 10px auto;
+  }
+}
+
+.fas{
+  font-size: 20px;
+  color: #031929;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+
+/*faddddddddddd*/
+/* Dropdown Button */
+.btn-group {
+  top:-50px;
+}
+
+#fondo1{
+  background-image: linear-gradient(rgb(255, 255, 255),rgb(164, 168, 170));
+}
+#fondo2{
+  background-color: rgba(0, 0, 0, 0);
+}

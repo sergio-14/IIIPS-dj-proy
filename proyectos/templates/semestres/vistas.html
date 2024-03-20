@@ -1,0 +1,39 @@
+{% extends 'p_principal.html'%}
+{% load static %}
+
+{% block content %}
+<br>
+<br>
+<main id="fondo1" data-bs-theme="light">
+    <!-- sección trabajos -->
+    <br>
+
+    <section class="trabajos" id="trabajos">
+        <h2 id="titsemestre">Semestres de la Facultad Ingenieria Sistemas</h2>
+
+        <nav>
+            <a href="javascript:void(0)" class="borde" id="item" onclick="verCategoria('item')">Todos</a>
+            <a href="javascript:void(0)" class="" id="paraleloA" onclick="verCategoria('paraleloA')">Paralelo A</a>
+            <a href="javascript:void(0)" class="" id="ParaleloB"onclick="verCategoria('ParaleloB')">Paralelo B</a>       
+        </nav>
+
+        <div class="galeria">
+            {% for semestre in semestres %}
+            <div class="item paraleloA">
+                <img src="{% static 'img/cajas1.jpg' %}" alt="">
+                <div class="info">
+                    <h3><i class="bi bi-person-video3"></i>{{ semestre.Semestre }}</h3>
+                    <span>Gestion de Proyectos</span>
+                    <a href="{% url 'materias' semestre.Id_Semestre %}">Ver Trabajo <i class="bi bi-box-seam"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+
+            
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+</main>
+{% endblock %}

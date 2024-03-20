@@ -1,0 +1,51 @@
+{% extends 'P_principal.html' %}
+{% block content %}
+{% load static %}
+<br>
+<br>
+<br>
+<br>
+<br>
+{{error}}
+<form action="/registrar/" method="POST" class="form-group">
+        {% csrf_token %}
+        <section > 
+            <div class="form-box">  
+                <div class="form-value">
+                    <form action="">
+                        <h2>Ver Semestre</h2>
+                        <div class="inputbox">
+                            <label for="">Gestion</label>
+                            <select name="select">
+                                <option>ho</option>
+                                
+                                <option value="">op</option>
+                                
+                               
+                            </select>
+                        </div>
+
+                        <div class="inputbox">
+                            <label for="">Paralelo</label>
+                            <select name="select">
+                                <option>ho</option>
+                                
+                                <option value="">op</option>
+                                
+                               
+                            </select>
+                        </div>
+                        
+                        <div class="forget">
+                            
+                        </div>
+                        <button id="btnlogin">INGRESAR</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+     </form>
+     <br>
+     <br>
+     <br>
+{% endblock  %}

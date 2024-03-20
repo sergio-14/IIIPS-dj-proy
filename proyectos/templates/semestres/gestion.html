@@ -1,0 +1,57 @@
+{% extends 'p_principal.html' %}
+
+{% block content %}
+{% load static %}
+<br>
+<br>
+<div class="container">
+  <div class="card-body">
+    <h4 class="card-title">LISTA DE GESTIONES</h4> 
+    <br>
+    <div class="card-header">
+        <a name=""  class="btn btn-success" id="boton1" href="{% url 'crearg' %}" role="button">Registrar</a>
+    </div>
+    <br>
+    <div class="table-responsive">
+        <table class="table">
+            <thead >
+                <tr id="yuu">
+                    <th scope="col">GESTION</th>
+                    <th scope="col">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for gestt in gform %}
+                <tr id="tbl">
+                    <td data-label="Gestiones">{{ gestt.Gestion }}
+
+                    </td>
+                    <td data-label="Acciones">
+                        <a name="" id="" class="btn btn-info" href="{% url 'editarg' gestt.Id_Ges %}" role="button">EDITAR</a>
+                        |
+                        <a name="" id="" class="btn btn-danger" href="{% url 'eliminarg' gestt.Id_Ges %}" role="button">BORRAR</a>
+                    </td>
+                   
+                <tr>
+                    {% endfor %}
+                   
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

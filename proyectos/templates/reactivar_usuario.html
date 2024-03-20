@@ -1,0 +1,14 @@
+{% extends 'p_principal.html' %}
+
+{% block content %}
+  <h2>Reactivar Usuario</h2>
+  <p>¿Estás seguro de que quieres reactivar al usuario "{{ user.username }}"?</p>
+
+  <form action="{% url 'reactivar_usuario' user.id %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="user_id" value="{{ user.id }}">
+    <button type="submit">Confirmar</button>
+  </form>
+
+  <a href="{% url 'listarusuarioseliminado' %}">Cancelar</a>
+{% endblock %}

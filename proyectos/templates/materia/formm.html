@@ -1,0 +1,42 @@
+<form enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    {% for campo in formularios %}
+    <div class="container">
+        <label for="" class="form-label">{{ campo.label }}:</label>
+        <input 
+        type="{{ campo.field.widget.input_type }}"
+        class="form-control" 
+        name="{{ campo.name}}" 
+        id="pot" 
+        aria-describedby="helpId" 
+        placeholder="{{ campo.label }}"
+        value="{{ campo.value | default:'' }}"
+        />
+
+    </div> 
+    <div class="col-12 help-text">
+        {{campo.errors}}
+    </div>
+    {% endfor %}
+    <a id="boton2">
+        <input name="" id="boton1" class="btn btn-primary " type="submit" value="Enviar Informacion">
+    </a>
+    <a name="" id="boton1" class="btn btn-danger" href="{% url 'semest' %}" role="button">Cancelar</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</form>

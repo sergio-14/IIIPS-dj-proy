@@ -1,0 +1,27 @@
+{% extends 'p_principal.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class"container">
+    <div class="form-group">
+      <label for="" >materia</label>
+      <input type="text"
+        class="form-control" name="Materia" id="" aria-describedby="helpId" placeholder="">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+
+      <label for="">Semestres</label>
+      
+      <select name="select">
+        <option>ho</option>
+        {% for op in mtf %}
+        <option value="{{ op.Id_Semestre }}">{{ op.Semestre }}</option>
+        
+        {% endfor %}
+      </select>
+     
+    </div>
+
+</div>
+
+{% endblock %}
